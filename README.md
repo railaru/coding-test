@@ -2,7 +2,10 @@
 
 ~to run on a local development server:
 
-npm install
+npm install 
+
+and
+
 npm start
 
 ~to create a production build
