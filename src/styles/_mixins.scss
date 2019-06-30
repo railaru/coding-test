@@ -1,0 +1,93 @@
+//start convert px to rem
+$browser-base-size: 16px;
+
+@function rem($size) {
+  $remSize: $size / $browser-base-size;
+  @return #{$remSize}rem;
+}
+//end convert px to rem
+
+//start material elevation
+@mixin elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@mixin elevation-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@mixin elevation-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@mixin elevation-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+@mixin elevation-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+//end material elevation
+
+// start images
+@mixin image-cover {
+  object-fit: cover;
+  object-position: center;
+}
+@mixin center-bg-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+// end images
+
+//start spacing mixins
+@mixin landing-section-top-bottom-spacing {
+  padding: 75px 0;
+
+  @media (min-width: $breakpoint-m) {
+    padding: 120px 0;
+  }
+}
+//end spacing mixins
+
+//start clearfix
+@mixin clearfix() {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+//end clearfix
+
+//start animations
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes animated-bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.animated-bounce {
+  animation: animated-bounce 2s infinite ease;
+}
+//end animations

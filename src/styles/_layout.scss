@@ -1,0 +1,580 @@
+//start cards
+.card {
+  text-align: center;
+  &__img {
+    width: 64px;
+    height: 64px;
+  }
+  &__title {
+    margin-top: 10px;
+  }
+  &__text {
+    margin-top: 10px;
+  }
+}
+//end cards
+
+//start sliders
+.glide {
+  margin-top: 50px;
+  @media (min-width: $breakpoint-l) {
+    margin-top: 75px;
+  }
+}
+.glide-dot-container {
+  display: flex;
+  margin-top: 15px;
+}
+.glide__dots {
+  margin: auto;
+}
+.glide__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: $color-2;
+  transition: $hover-transition;
+
+  cursor: pointer;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+.glide__bullet--active {
+  background: $color-1;
+  transition: $hover-transition;
+}
+//end sliders
+
+//start buttons
+.btn-1 {
+  display: inline-block;
+  padding: 0 30px;
+  border-radius: 2px;
+  font-size: rem(18px);
+  line-height: rem(58px);
+  letter-spacing: rem(1.1px);
+  @include elevation-1;
+  transition: $hover-transition;
+  &:focus,
+  &:hover {
+    @include elevation-2;
+    transition: $hover-transition;
+  }
+}
+.btn-2 {
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid $color-3;
+  transition: $hover-transition;
+  img {
+    margin: auto;
+    max-width: 130px;
+    height: 30px;
+  }
+  &:focus,
+  &:hover {
+    border: 1px solid $color-4;
+    transition: $hover-transition;
+  }
+}
+.btn-3 {
+  display: block;
+  padding: 0 30px;
+  font-size: rem(22px);
+  line-height: rem(58px);
+  letter-spacing: rem(1.1px);
+  border-radius: rem(2px);
+  text-align: center;
+  @include elevation-1;
+  transition: $hover-transition;
+  &:focus,
+  &:hover {
+    @include elevation-2;
+    transition: $hover-transition;
+  }
+}
+.btn-4 {
+  display: flex;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid $color-11;
+  transition: $hover-transition;
+  img {
+    margin: auto;
+    max-width: 130px;
+    height: 30px;
+  }
+  &:focus,
+  &:hover {
+    border: 1px solid $color-3;
+    transition: $hover-transition;
+  }
+}
+//end buttons
+
+//start section 1
+.section-1 {
+  @include landing-section-top-bottom-spacing;
+
+  &__left {
+    &__logo {
+      max-width: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &__right {
+    text-align: center;
+    margin-top: 50px;
+    &__description {
+      margin-top: 15px;
+    }
+  }
+}
+@media (min-width: $breakpoint-m) {
+  .section-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    &__left {
+      &__logo {
+        max-width: 350px;
+        margin-left: 0;
+        @include elevation-3;
+      }
+    }
+
+    &__right {
+      text-align: left;
+      margin-top: 0;
+      &__text {
+        width: 90%;
+      }
+      &__description {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-l) {
+  .section-1 {
+    grid-column-gap: 0;
+  }
+}
+//end section 1
+
+//start section 2
+
+.section-2 {
+  @include landing-section-top-bottom-spacing;
+  @include clearfix;
+  &__left {
+    text-align: center;
+    margin-top: 50px;
+    &__description {
+      margin-top: 15px;
+    }
+  }
+  &__right {
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (min-width: $breakpoint-m) {
+    &__left {
+      float: left;
+      width: 50%;
+      text-align: left;
+      &__text {
+        width: 90%;
+      }
+    }
+    &__right {
+      float: right;
+      width: 50%;
+      &__image {
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+//end section 2
+
+//start section 3
+
+.section-3 {
+  @include landing-section-top-bottom-spacing;
+
+  &__title {
+    margin-top: 50px;
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    max-width: 817px;
+    &--narrower {
+      max-width: 150px;
+    }
+  }
+  &__button {
+    margin-top: 25px;
+    display: flex;
+    a {
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $breakpoint-l) {
+    &__title {
+      margin-top: 75px;
+    }
+  }
+}
+//end section 3
+
+//start parallax section
+.custom-parallax {
+  position: relative;
+  overflow: hidden;
+  &--with-bg-color {
+    background-color: $color-1;
+    height: auto;
+    max-height: auto;
+    padding: 25px;
+    padding-bottom: 50px;
+    display: flex;
+  }
+  &__content {
+    margin: auto;
+    text-align: center;
+    &__btn {
+      margin-top: 20px;
+      @media (min-width: $breakpoint-m) {
+        margin-right: 10px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__bottom-cover {
+    position: absolute;
+    width: 105%;
+    bottom: -95px;
+    height: 150px;
+    transform: rotate(-5deg);
+    right: -20px;
+    &--reverse {
+      transform: rotate(5deg);
+      right: 0;
+      left: -20px;
+    }
+  }
+
+  @include center-bg-img();
+  @media (min-width: $breakpoint-m) {
+    background-attachment: fixed;
+  }
+
+  height: 300px;
+  max-height: 500px;
+  @media (min-width: $breakpoint-m) {
+    height: 40vw;
+  }
+  @media (min-width: $breakpoint-l) {
+    height: 32vw;
+  }
+}
+//end parallax section
+
+//start parallax header
+.parallax-header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: $color-5;
+
+  &__background {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: inherit;
+    height: inherit;
+    background-color: $color-1;
+    .chevron-down {
+      cursor: pointer;
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      svg {
+        transform: rotate(90deg);
+        fill: $color-4;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &__overlay {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+  &__centered {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    &__inner {
+      text-align: center;
+      margin: auto;
+      &__logo {
+        display: block;
+        margin: 0 auto;
+        svg {
+          fill: $color-4;
+        }
+      }
+      &__title {
+        margin-top: 20px;
+        @media (min-width: $breakpoint-m) {
+          margin-top: 40px;
+        }
+        @media (min-width: $breakpoint-l) {
+          max-width: 785px;
+        }
+      }
+      &__button {
+        margin-top: 25px;
+        @media (min-width: $breakpoint-l) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+//end parallax header
+
+//start navbar
+.navbar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  transition: $slow-transition;
+  &__hamburger {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 6px;
+    cursor: pointer;
+    svg {
+      fill: $color-4;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 5px;
+    svg {
+      fill: $color-4;
+      width: 80px;
+      transition: $slow-transition;
+    }
+  }
+  &__drawer {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    grid-template-columns: 240px 1fr;
+    &__menu {
+      height: 100vh;
+      overflow-y: scroll;
+      transform: translateX(-240px);
+      transition: 200ms;
+      &__group {
+        &__title {
+          margin: 0 20px;
+          margin-bottom: 5px;
+          margin-top: 35px;
+        }
+        &__link {
+          padding: 10px 20px;
+          display: block;
+        }
+      }
+      &__btn {
+        margin: 0 20px;
+        margin-top: 20px;
+      }
+      &__top {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      &__logo {
+        margin-left: 15px;
+        svg {
+          fill: $color-1;
+          width: 80px;
+        }
+      }
+      &__arrow {
+        margin-left: 20px;
+        cursor: pointer;
+        svg,
+        g {
+          fill: $color-1;
+        }
+      }
+      &--active {
+        transform: translateX(0px);
+        transition: 200ms;
+      }
+    }
+    &__overlay {
+      background: rgba(0, 0, 0, 0.5);
+      margin-left: -240px;
+    }
+    &--opened {
+      display: grid;
+    }
+  }
+  &--scrolled {
+    background: $color-4;
+    @include elevation-1;
+    transition: $slow-transition;
+    .navbar__hamburger,
+    .navbar__logo {
+      svg {
+        fill: $color-5;
+        transition: $slow-transition;
+      }
+    }
+  }
+}
+//start navbar
+
+//start footer
+.footer {
+  padding: 50px 0;
+  @media (min-width: $breakpoint-l) {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  &__info {
+    max-width: 130px;
+    margin: 0 auto;
+    @media (min-width: $breakpoint-l) {
+      margin-left: 0;
+    }
+    &__logo {
+      display: block;
+      margin: auto;
+    }
+    &__copyright {
+      margin-top: 13px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    &__sm {
+      margin: -7px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &__link {
+        margin: 7px;
+        svg,
+        path {
+          transition: $hover-transition;
+        }
+        &:focus,
+        &:hover {
+          svg,
+          path {
+            fill: $color-2;
+            transition: $hover-transition;
+          }
+        }
+      }
+    }
+  }
+  &__links {
+    @media (min-width: $breakpoint-m) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+    }
+    @media (min-width: $breakpoint-l) {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 10px;
+    }
+    &__link {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &__title {
+      margin-top: 2px;
+      @media (min-width: $breakpoint-l) {
+        margin-bottom: 20px;
+      }
+    }
+    &__group {
+      border-top: 1px solid $color-6;
+      padding-top: 25px;
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media (min-width: $breakpoint-l) {
+        display: inline-block;
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+  }
+}
+//end footer
+
+//start containers
+body {
+  overflow-x: hidden !important;
+}
+
+.container {
+  padding: 0 25px;
+  margin: 0 auto;
+  max-width: 1270px;
+}
+//end containers

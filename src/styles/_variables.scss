@@ -1,0 +1,7 @@
+//responsive breakpoints (mobile first)
+$breakpoint-m: 639px;
+$breakpoint-l: 1199px;
+
+//transitinons
+$hover-transition: 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+$slow-transition: 1s cubic-bezier(0.25, 0.8, 0.25, 1);
